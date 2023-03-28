@@ -14,35 +14,36 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
-
-@CrossOrigin(origins = "http://localhost:8080/tickets")
+@CrossOrigin(origins = "http://localhost:8080/bookmarks")
 @RestController
-public class mainController {
+public class bookmarkController {
 
 	@Autowired
-	private ticketRepository repo;
+	private bookmarkRepository repo;
 	
-	@GetMapping("/tickets")
-	public List<Ticket> getTickets(){
+	
+	@GetMapping("/bookmarks")
+	public List<Bookmark> getBookmarks(){
 		return repo.findAll();
 	}
 	
 	
 	// (C)RUD -- Create
-	@PostMapping("/tickets")
+	@PostMapping("/bookmarks")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Ticket create(@RequestBody Ticket avchar) {
+	public Bookmark create(@RequestBody Bookmark avchar) {
 		repo.save(avchar);
 		return avchar;
 	}
 	
 	// CRU(D) -- Delete
-	@DeleteMapping("/tickets/{id}")
+	@DeleteMapping("/bookmarks/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable("id") Long id) {
 		repo.deleteById(id);
 	}
+	
+	
 	
 	
 	
