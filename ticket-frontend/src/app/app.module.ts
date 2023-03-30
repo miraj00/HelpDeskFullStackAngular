@@ -21,7 +21,8 @@ const routes: Routes = [
   {path:"home", component: HomeComponent},
   {path:"", component: TicketListComponent}, 
   {path:"tickets/:id", component: TicketDetailComponent},
-  {path:"addTicket", component: NewTicketComponent}
+  {path:"addTicket", component: NewTicketComponent},
+  {path:"showBookMarks", component: BookmarkListComponent}
 
 ]
 
