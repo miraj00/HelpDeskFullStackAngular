@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { NewTicketComponent } from './new-ticket/new-ticket.component';
 import { BookmarkListComponent } from './bookmark-list/bookmark-list.component';
 import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
-import { FormsModule } from '@angular/forms';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,9 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, 
-    FormsModule
+    HttpClientModule,
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

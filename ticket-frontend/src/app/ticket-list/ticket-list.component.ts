@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TicketService } from 'src/app/ticket.service';
 import Ticket from '../tickets';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-ticket-list',
@@ -9,6 +10,8 @@ import Ticket from '../tickets';
   styleUrls: ['./ticket-list.component.css']
 })
 export class TicketListComponent {
+
+  faTrashCan = faTrashCan;
 
   tickets: Ticket[] = [];
 
