@@ -21,7 +21,7 @@
           </div>
         </td>
         <td>
-          <p class="fw-normal mb-1">{{ticket.detail}}</p>
+          <p class="fw-normal mb-1" [ngClass]="{'completedTicket':ticket.open == false}"  >{{ticket.detail}}</p>
         </td>
         <td>
           <p class="text-muted mb-0">{{ticket.resolution}}</p>
