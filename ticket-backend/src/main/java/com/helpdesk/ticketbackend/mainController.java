@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import co.grandcircus.bookshelfapi.controller.BookNotFoundException;
+import co.grandcircus.bookshelfapi.model.Book;
+
 
 
 
@@ -27,6 +30,15 @@ public class mainController {
 	public List<Ticket> getTickets(){
 		return repo.findAll();
 	}
+	
+	
+	
+	// C(R)UD -- Read One
+	@GetMapping("/tickets/{id}")
+	public Ticket readOne(@PathVariable("id") Long id) {
+		return repo.findById(id).orElseThrow(() -> new TicketNotFoundException(id) );
+	}
+	
 	
 	
 	// (C)RUD -- Create
