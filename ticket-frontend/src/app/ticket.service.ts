@@ -32,10 +32,10 @@ deleteTicket(id: number) : Observable<void> {
   return this.http.delete<void>(`${this.baseURL}/${id}`);
 }
 
+getTicketDetail(id: number) {
+  return this.http.get<Ticket>(`${this.baseURL}/${id}`);
+}
 
-// createTicket(newTicket : Ticket) : Observable<Object>{
-//   return this.http.post<Ticket>(`${this.baseURL}`, newTicket);
-// }
 
 
 }
