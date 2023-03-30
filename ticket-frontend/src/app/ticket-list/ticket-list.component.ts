@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TicketService } from 'src/app/ticket.service';
 import Ticket from '../tickets';
+import Bookmark from '../bookmarks';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -15,12 +16,14 @@ export class TicketListComponent {
 
   tickets: Ticket[] = [];
 
+  bookmarks: Bookmark[] = [];
+
   constructor(private api : TicketService, private router: Router) {}
 
   ngOnInit() : void {
     this.loadTickets();
+    
   }
-
 
   loadTickets() {  
     this.api.getAllTickets().subscribe(
@@ -40,6 +43,14 @@ export class TicketListComponent {
   addTicket(newTicket : Ticket) {
      this.tickets.push(newTicket);
      this.loadTickets(); 
+    
+  }
+
+  addBookmark(newBookmark : Bookmark) {
+
+    // newBookmark.bookmarkId=Bookmark.id;
+    this.bookmarks.push(newBookmark);
+
   }
 
 

@@ -8,6 +8,7 @@
         <th>Resolution</th>
         <th>Opended By :</th>
         <th>Closed By :</th>
+        <th> BookMark ?</th>
         <th>Remove ??</th>
       </tr>
     </thead>
@@ -21,7 +22,7 @@
           </div>
         </td>
         <td>
-          <p class="fw-normal mb-1" [ngClass]="{'completedTicket':ticket.open == false}"  >{{ticket.detail}}</p>
+          <p class="fw-normal mb-1" [ngClass]="{'completedTicket':ticket.open == false}" > <a [routerLink]="['tickets', i]">{{ticket.detail}}</a></p>
         </td>
         <td>
           <p class="text-muted mb-0">{{ticket.resolution}}</p>
@@ -33,6 +34,10 @@
             <p class="text-muted mb-0">{{ticket.closedby}}</p>
         </td>
         <td>
+          <!-- <button (click)="AddBookmark(i)" id="buttonStyle"> BookMark</button> -->
+          <button  id="buttonStyle"> BookMark</button>
+        </td>
+        <td>
           <button
             (click)="deleteTicket(ticket.id)" id="butttonStyle" >....<fa-icon [icon]="faTrashCan"></fa-icon>....</button>
         </td>
@@ -42,4 +47,3 @@
 
   <br/> <br/>
 
-<app-new-ticket (TicketSave)="addTicket($event)"></app-new-ticket>
