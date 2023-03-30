@@ -1,4 +1,4 @@
-export interface Bookmarks {
+export default interface Bookmarks {
     
     id: number;
     username: string;
