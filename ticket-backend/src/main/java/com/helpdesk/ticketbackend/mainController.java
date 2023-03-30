@@ -33,9 +33,11 @@ public class mainController {
 	@PostMapping("/tickets")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Ticket create(@RequestBody Ticket avchar) {
+		avchar.setOpen(true);           //  <------ Setting Open value to TRUE to prevent cross out while adding in Ticket-List Table
 		repo.save(avchar);
 		return avchar;
 	}
+	
 	
 	// CRU(D) -- Delete
 	@DeleteMapping("/tickets/{id}")
