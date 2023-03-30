@@ -33,5 +33,9 @@ deleteTicket(id: number) : Observable<void> {
 }
 
 
+// createTicket(newTicket : Ticket) : Observable<Object>{
+//   return this.http.post<Ticket>(`${this.baseURL}`, newTicket);
+// }
+
 
 }

@@ -1,1 +1,48 @@
 
+<h1 style="text-align: center;"> Add New Ticket</h1>
+<table class="table align-middle mb-0 bg-white" style="margin-left: 70px; margin-top: 10px; width: 90%;">
+    <thead class="bg-light">
+      <tr>
+        <th>Ticket</th>
+        <th>Details</th>
+        <th>Resolution</th>
+        <th>Opended By :</th>
+        <th>Closed By :</th>
+        <th>Add ??</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>
+          <div class="d-flex align-items-center">
+             <div class="ms-3">
+              <p class="fw-normal mb-1">Entry :  </p>
+             </div>
+          </div>
+        </td>
+
+        <td>
+            <textarea type="text" class="center" 
+            rows="5"  
+            style="width:500px; height:100px;" [(ngModel)]="newTicket.detail"> </textarea>
+        </td>
+
+        <td>
+          <p class="text-muted mb-0"> Resolution : Pending </p>
+        </td>
+        
+        <td>
+            <input type="text" [(ngModel)]="newTicket.openedby" />
+        </td>
+
+        <td>
+            <p class="text-muted mb-0"> Closed By : Pending </p>
+        </td>
+        
+        <td>
+            <button (click)="addNewTicket()"> Add Ticket </button>
+        </td>
+     </tr>
+    </tbody>
+  </table>
