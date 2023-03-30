@@ -19,8 +19,8 @@ export class TicketListComponent {
 
   ngOnInit() : void {
     this.loadTickets();
+    
   }
-
 
   loadTickets() {  
     this.api.getAllTickets().subscribe(
@@ -40,6 +40,7 @@ export class TicketListComponent {
   addTicket(newTicket : Ticket) {
      this.tickets.push(newTicket);
      this.loadTickets(); 
+    
   }
 
 

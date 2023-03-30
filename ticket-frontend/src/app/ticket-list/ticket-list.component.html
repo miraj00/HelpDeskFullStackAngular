@@ -21,7 +21,7 @@
           </div>
         </td>
         <td>
-          <p class="fw-normal mb-1" [ngClass]="{'completedTicket':ticket.open == false}"  >{{ticket.detail}}</p>
+          <p class="fw-normal mb-1" [ngClass]="{'completedTicket':ticket.open == false}" > <a [routerLink]="['tickets', i]">{{ticket.detail}}</a></p>
         </td>
         <td>
           <p class="text-muted mb-0">{{ticket.resolution}}</p>
@@ -42,4 +42,3 @@
 
   <br/> <br/>
 
-<app-new-ticket (TicketSave)="addTicket($event)"></app-new-ticket>
