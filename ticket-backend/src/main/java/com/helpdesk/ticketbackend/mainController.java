@@ -9,13 +9,10 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
-import co.grandcircus.bookshelfapi.controller.BookNotFoundException;
-import co.grandcircus.bookshelfapi.model.Book;
-
 
 
 
@@ -50,6 +47,15 @@ public class mainController {
 		return avchar;
 	}
 	
+	@PutMapping("/tickets/{id}")
+	 public String editTicket(@PathVariable long id,@RequestBody Ticket newTicket) {
+	 Ticket editTicket = repo.findById(id).get();
+	 editTicket.setResolution(newTicket.getResolution());
+	 editTicket.setClosedby(newTicket.getClosedby());
+	 editTicket.setOpen(false);
+	 repo.save(editTicket);
+	 return "Ticket at " + id+" updated";
+	 }
 	
 	// CRU(D) -- Delete
 	@DeleteMapping("/tickets/{id}")
