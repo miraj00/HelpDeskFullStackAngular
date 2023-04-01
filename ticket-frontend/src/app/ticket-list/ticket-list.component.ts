@@ -26,7 +26,7 @@ export class TicketListComponent {
 
   ngOnInit() : void {
     this.loadTickets();
-       setTimeout(() => { this.ngOnInit() }, 1000)          // refreshes page every 0.01 milliseconds
+     //  setTimeout(() => { this.ngOnInit() }, 1000)          // refreshes page every 0.01 milliseconds
   }
 
   loadTickets() {  

@@ -37,5 +37,9 @@ getTicketDetail(id: number) {
 }
 
 
+putTicket(editedTicket:Ticket){
+  return this.http.put(`${this.baseURL}`, editedTicket);
+}
+
 
 }
