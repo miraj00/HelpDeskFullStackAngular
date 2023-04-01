@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:"", component: TicketListComponent}, 
   {path:"ticketDetail/:id", component: TicketDetailComponent},
   {path:"addTicket", component: NewTicketComponent},
-  {path:"showBookMarks", component: BookmarkListComponent}
+  {path:"showBookMarks", component: BookmarkListComponent},
+  {path:"editTicket/:id", component: EditTicketComponent}
 
 ]
 
@@ -36,7 +38,8 @@ const routes: Routes = [
     BookmarkListComponent,
     TicketDetailComponent,
     TicketListComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditTicketComponent
     
 
   ],

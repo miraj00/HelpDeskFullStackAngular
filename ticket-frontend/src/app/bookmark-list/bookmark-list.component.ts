@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router } from '@angular/router';
 import { BookmarkService } from "../bookmark.service";
 import Bookmark from '../bookmarks';
@@ -8,9 +8,14 @@ import Bookmark from '../bookmarks';
   templateUrl: './bookmark-list.component.html',
   styleUrls: ['./bookmark-list.component.css']
 })
-export class BookmarkListComponent {
+export class BookmarkListComponent implements OnInit {
 
   bookmarks: Bookmark[] = [];
+
+
+  newBookmark: Bookmark = ({} as any) as Bookmark;
+
+  @Output () BookmarkSave = new EventEmitter<Bookmark>();
 
   constructor(private api : BookmarkService, private router: Router) {}
 
@@ -27,18 +32,31 @@ export class BookmarkListComponent {
        }); 
   }
 
-
-  deleteTicket(id: number) : void {
+  deleteBookmark(id: number) : void {
     this.api.deleteBookmark(id).subscribe(
       ()=> this.loadBookmarks());     
   }
 
-
-  addTicket(newBookmark : Bookmark) {
+  addBookmark(newBookmark : Bookmark) {
      this.bookmarks.push(newBookmark);
      this.loadBookmarks(); 
     
   }
+
+  // emiting bookmark 
+  addNewBookmark(){
+    this.api.addBookmark(this.newBookmark).subscribe(
+      ()=> {
+                
+          this.BookmarkSave.emit(
+            
+            this.newBookmark
+            );
+
+          this.newBookmark =({} as any) as Bookmark; 
+      })
+  }
+
 
 
 }

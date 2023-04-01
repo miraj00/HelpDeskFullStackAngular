@@ -6,13 +6,16 @@
   <div class="card"  style="width: 80%;">
   
   <div class="card-body">
-      <h1> Ticket Details</h1>
+    <!-- <h1> Ticket Details</h1>      <button routerLink="/editTicket"      [routerLink]="['/editTicket', ticketInfo.id]"> Edit </button> -->
+    <h1> Ticket Details</h1>
+    <!-- <h1> Ticket Details</h1>      <a routerLink="/editTicket"> Edit </a>  -->
+      <a [routerLink]="['/editTicket', ticketInfo.id]"> Edit</a>
       <p>_________________________________________________________________________________________________________________________________________________</p>  
   <br>
   
   <div>
     
-    <h2 class="row">Ticket ID : {{ticketInfo.id}} </h2>  <br/>
+    <h2 class="row">Ticket ID :{{ticketInfo.id}} </h2>   <br/>
 
     <h2 class="row"> Details  : {{ticketInfo.detail}} </h2> <br/>
 

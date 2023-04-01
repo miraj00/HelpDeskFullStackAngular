@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TicketService } from '../ticket.service';
 import Tickets from '../tickets';
 
@@ -10,7 +10,7 @@ import Tickets from '../tickets';
 })
 export class TicketDetailComponent {
   
-  constructor(private route: ActivatedRoute, private api: TicketService){
+  constructor(private route: ActivatedRoute, private api: TicketService, private router: Router){
   }
 
   loading:boolean = true;
