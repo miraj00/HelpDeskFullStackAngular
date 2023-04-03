@@ -23,20 +23,17 @@ export class NewTicketComponent implements OnInit {
   addNewTicket(){
     this.ticketAPI.addTicket(this.newTicket).subscribe(
       ()=> {
-          // this.newTicket.open = true;
-         
-          this.TicketSave.emit(
-            
-            this.newTicket
-            );
+                   
+          this.TicketSave.emit(this.newTicket);
 
           this.newTicket =({} as any) as Ticket;
 
-       //   setTimeout(() => { this.router.navigate(['']) }, 8000);
-      //    this.router.navigate(['']);
+          this.gotolistPage(); 
       })
   }
 
-
+gotolistPage(){
+  this.router.navigate(['/']);
+}
 
 }
