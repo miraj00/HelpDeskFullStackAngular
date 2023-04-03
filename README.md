@@ -33,4 +33,6 @@
 ![](/ticket-frontend/src/assets/WelcomePage.JPG) 
 ![](/ticket-frontend/src/assets/HomePage.JPG) 
 ![](/ticket-frontend/src/assets/Add-Ticket.JPG)
-![](/ticket-frontend/src/assets/BookMarks.JPG)  
+![](/ticket-frontend/src/assets/BookMarks.JPG) 
+![](/ticket-frontend/src/assets/ticket-detail.JPG) 
+![](/ticket-frontend/src/assets/edit-ticket.JPG)  
