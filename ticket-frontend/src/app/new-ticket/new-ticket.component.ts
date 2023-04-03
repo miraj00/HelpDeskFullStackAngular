@@ -33,7 +33,7 @@ export class NewTicketComponent implements OnInit {
   }
 
 gotolistPage(){
-  this.router.navigate(['home']);
+  this.router.navigate(['']);
 }
 
 }

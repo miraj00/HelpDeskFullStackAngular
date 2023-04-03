@@ -10,3 +10,17 @@
     font-weight: bold;
     font-size: 20px;
  }
+
+ #HomePageButton {
+    align-content: center;
+    background-color: #108b7d;
+    width: 70%;
+    height : 55px;
+    border : 1px;
+    border-radius: 7px;
+    margin-left: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}

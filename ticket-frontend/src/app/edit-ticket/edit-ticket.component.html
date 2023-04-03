@@ -7,7 +7,7 @@
   
   <div class="card-body">
 
-    <form>
+    <form (ngSubmit)="editTicket()">
 
       <h1> Ticket Details</h1>     
       <p>_________________________________________________________________________________________________________________________________________________</p>  
@@ -17,14 +17,15 @@
             
             <h2 class="row"> Resolution : <input type="text"  rows="2" style="width:100%; height:50px;" [(ngModel)]="editedTicket.resolution" name ="resolution"> </h2> <br/>
 
-            <h2 class="row"> Closed By : <input type="text" name="closedby" value="ttttt" [(ngModel)]="editedTicket.closedby" > </h2> <br/>
+            <h2 class="row"> Closed By : <input type="text" name="closedby" [(ngModel)]="editedTicket.closedby" > </h2> <br/>
             
         </div>
         
-        <button type="submit" id="saveButton"  (Click)="editTicket()" routerLink=""> Save </button>
+        <button id="saveButton"  > Save </button>   
         
     </form> 
-
+    <br/> <br/>
+    <button type="submit" id="HomePageButton" routerLink="" >Return to Home Page</button>
 
             </div>
          </div>  
