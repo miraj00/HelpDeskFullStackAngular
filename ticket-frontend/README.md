@@ -33,4 +33,6 @@
 ![](/src/assets/WelcomePage.JPG) 
 ![](/src/assets/HomePage.JPG) 
 ![](/src/assets/Add-Ticket.JPG)
-![](/src/assets/BookMarks.JPG)  
+![](/src/assets/BookMarks.JPG) 
+![](/src/assets/ticket-detail.JPG) 
+![](/src/assets/edit-ticket.JPG)  
