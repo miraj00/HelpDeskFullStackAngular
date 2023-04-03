@@ -1,44 +1,40 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TicketService } from '../ticket.service';
-import Ticket from '../tickets';
+import  Ticket  from '../tickets';
 
 @Component({
   selector: 'app-edit-ticket',
   templateUrl: './edit-ticket.component.html',
   styleUrls: ['./edit-ticket.component.css']
 })
-export class EditTicketComponent {
+export class EditTicketComponent implements OnInit {
 
+   id: number = 0;
 
   editedTicket:Ticket = ({} as any) as Ticket;
 
+  constructor(private ticketAPI : TicketService, private router: Router,private route: ActivatedRoute) {}
 
-  constructor(private ticketAPI : TicketService, private router: Router) {}
+  ngOnInit(){
+    this.id = this.route.snapshot.params['id'];
+  }
 
 
    editTicket() {
+    this.ticketAPI.putTicket(this.id, this.editedTicket)
+      .subscribe( data => {
+        console.log(data);
+      this.gotolistPage();  
+      })
+    }
+       
 
-    this.ticketAPI.putTicket(this.editedTicket).subscribe(
-     ()=> console.log("Request being sent")
-    )}
+  onSubmit(){
+    this.editTicket();
+  }  
 
-//     let ticket = {} as Ticket; 
-    
-//  //   let Bookmark = {} as Bookmark;
-
-//     ticket.id = tickets.id;
-//     ticket.resolution = tickets.resolution;
-//     ticket.closedby= tickets.closedby;
-
-//      this.tickets.push(ticket);
-
-//      this.bookmarkAPI.addBookmark(Bookmark).subscribe(
-      
-//       )}
-
-
-
-
-
+gotolistPage(){
+  this.router.navigate(['/']);
+}
 }

@@ -6,11 +6,14 @@
   <div class="card"  style="width: 80%;">
   
   <div class="card-body">
-    <!-- <h1> Ticket Details</h1>      <button routerLink="/editTicket"      [routerLink]="['/editTicket', ticketInfo.id]"> Edit </button> -->
+  
+    <header>
     <h1> Ticket Details</h1>
-    <!-- <h1> Ticket Details</h1>      <a routerLink="/editTicket"> Edit </a>  -->
-      <a [routerLink]="['/editTicket', ticketInfo.id]"> Edit</a>
-      <p>_________________________________________________________________________________________________________________________________________________</p>  
+    
+    <button id="editButtonStyle" [routerLink]="['/editTicket', ticketInfo.id]"> Edit</button>
+    </header>
+
+    <p>_________________________________________________________________________________________________________________________________________________</p>  
   <br>
   
   <div>

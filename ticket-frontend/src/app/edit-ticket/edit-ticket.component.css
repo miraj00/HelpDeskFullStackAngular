@@ -1,0 +1,12 @@
+#saveButton {
+    align-content: center;
+    background-color: #108b7d;
+    width: 50%;
+    height : 55px;
+    border : 1px;
+    border-radius: 7px;
+    margin-left: 200px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+ }

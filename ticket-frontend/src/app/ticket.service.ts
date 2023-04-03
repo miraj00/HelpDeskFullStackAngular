@@ -37,8 +37,8 @@ getTicketDetail(id: number) {
 }
 
 
-putTicket(editedTicket:Ticket){
-  return this.http.put(`${this.baseURL}`, editedTicket);
+putTicket(id: number, value: any): Observable<object> {
+  return this.http.put(`${this.baseURL}/${id}`, value);
 }
 
 
