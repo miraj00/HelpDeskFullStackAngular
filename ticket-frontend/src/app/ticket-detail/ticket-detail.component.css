@@ -20,7 +20,8 @@ body {
   
   #HomePageButton {
      align-content: center;
-     background-color: #108b7d;
+     color: white;
+     background-color: rgb(15, 107, 187);
      width: 90%;
      height : 35px;
      border : 1px;
@@ -67,12 +68,12 @@ body {
   
 
    #editButtonStyle {
-    background-color: rgb(12, 12, 121);
+    background-color: rgb(253, 147, 9);
     color: white;
-    border: 2px solid rgb(12, 12, 121) ;
+    border: 2px solid rgb(253, 147, 9) ;
     border-radius: 7px;
     align-content: center;
-    width: 10%;
+    width: 20%;
     height : 70px;
     font-size: 20px;
     
