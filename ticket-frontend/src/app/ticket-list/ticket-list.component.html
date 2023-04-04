@@ -9,7 +9,7 @@
         <th>Opended By :</th>
         <th>Closed By :</th>
         <th> BookMark ?</th>
-        <th>Remove ??</th>
+        <th>Remove ?</th>
       </tr>
     </thead>
     <tbody>
@@ -35,11 +35,13 @@
         </td>
         <td>
           <!-- <button (click)="AddBookmark(i)" id="buttonStyle"> BookMark</button> -->
-          <button (click)="addBookmark(i)" id="buttonStyle"> BookMark</button>
+          <button (click)="addBookmark(i)" id="buttonStyle"> <fa-icon [icon]="faBookmark"></fa-icon></button>
+
+      
         </td>
         <td>
           <button
-            (click)="deleteTicket(ticket.id)" id="butttonStyle" >....<fa-icon [icon]="faTrashCan"></fa-icon>....</button>
+            (click)="deleteTicket(ticket.id)" id="butttonStyle" ><fa-icon [icon]="faTrashCan"></fa-icon></button>
         </td>
      </tr>
     </tbody>

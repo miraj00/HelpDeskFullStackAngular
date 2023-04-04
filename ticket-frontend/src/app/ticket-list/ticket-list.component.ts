@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { TicketService } from 'src/app/ticket.service';
 import Ticket from '../tickets';
 import Bookmark from '../bookmarks';
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { BookmarkService } from '../bookmark.service';
 
 @Component({
@@ -14,6 +14,7 @@ import { BookmarkService } from '../bookmark.service';
 export class TicketListComponent {
 
   faTrashCan = faTrashCan;
+  faBookmark = faBookmark;
 
   tickets: Ticket[] = [];
 

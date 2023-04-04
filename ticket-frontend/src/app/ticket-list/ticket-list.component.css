@@ -1,22 +1,20 @@
 .completedTicket{
     text-decoration: line-through;
  }
+ /* #buttonStyle {
+  background-color: rgb(12, 12, 121);
+  color: white;
+  border: 2px solid rgb(12, 12, 121) ;
+  border-radius: 7px;
+  align-content: center;
+  width: 60%;
+  height : 25px;
+
+}
 
 
- #buttonStyle {
-    background-color: rgb(12, 12, 121);
-    color: white;
-    border: 2px solid rgb(12, 12, 121) ;
-    border-radius: 7px;
-    align-content: center;
-    width: 60%;
-    height : 25px;
+#buttonStyle:hover {
+  background-color: orange;
+  color: white;
   
-  }
-
-
-  #buttonStyle:hover {
-    background-color: orange;
-    color: white;
-    
-  }
+} */
